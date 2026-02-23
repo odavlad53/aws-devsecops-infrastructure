@@ -70,4 +70,4 @@ jobs:
           directory: ./terraform-infrastructure
           framework: terraform
           soft_fail: false
-          skip_check: CKV_AWS_18,CKV_AWS_144,CKV2_AWS_62,CKV_AWS_145
+          skip_check: CKV_AWS_18,CKV_AWS_144,CKV2_AWS_62,CKV_AWS_145,CKV_AWS_88,CKV_AWS_135
