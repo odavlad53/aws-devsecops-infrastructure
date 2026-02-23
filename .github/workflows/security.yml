@@ -25,7 +25,7 @@ jobs:
       - name: TruffleHog Secret Scan
         uses: trufflesecurity/trufflehog@main
         with:
-          path: ./terraform-infrastructure
+          path: "."
           base: main
           head: HEAD
 
@@ -41,7 +41,7 @@ jobs:
         with:
           scan-type: config
           scan-ref: 'terraform-infrastructure'
-          trivyignores: 'terraform-infrastructure/.trivyignore'
+          trivyignores: terraform-infrastructure/.trivyignore
           format: sarif
           output: trivy-results.sarif
 
