@@ -88,7 +88,7 @@ jobs:
       # -refresh=false avoids IAM GetRole reads (your CI user lacks iam:GetRole)
       - name: Terraform Plan
         working-directory: ${{ env.WORKING_DIR }}
-        run: terraform plan -input=false -no-color -refresh=false
+        run: terraform plan -input=false -no-color
 
   terraform-apply:
     name: Terraform Apply (manual approval via environment)
