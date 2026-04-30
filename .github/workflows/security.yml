@@ -26,8 +26,8 @@ jobs:
         uses: trufflesecurity/trufflehog@main
         with:
           path: "."
-          base: main
-          head: HEAD
+          base: ${{ github.event.before || github.sha }}~1
+          head: ${{ github.sha }}
 
   dependency-scanning:
     name: Dependency / Config Scan (Trivy)
